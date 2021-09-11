@@ -1,0 +1,20 @@
+import PropTypes from 'prop-types';
+import tw, { styled, css, theme } from 'twin.macro';
+
+const {{pascalCase name}}Container = styled.div`
+  ${tw` `}
+`;
+
+export const {{pascalCase name}} = (props) => {
+  const { children } = props;
+
+  return <{{pascalCase name}}Container>{children}</{{pascalCase name}}Container>;
+};
+
+{{pascalCase name}}.defaultProps = {
+  
+};
+
+{{pascalCase name}}.propTypes = {
+  children: PropTypes.node.isRequired,
+};

@@ -1,0 +1,98 @@
+{
+  "name": "nextjs-twin-tailwind-emotions-starter",
+  "version": "1.0.0",
+  "keywords": [
+    "Next.js",
+    "Tailwind",
+    "Twin.macro",
+    "Emotions",
+    "Eslint",
+    "Storybook",
+    "Jest",
+    "Plop"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "build": "next build",
+    "build:export": "next build && next export",
+    "build:storybook": "build-storybook",
+    "dev": "next dev",
+    "format": "prettier --write \"./**/*.{js,jsx}\"",
+    "generate": "npx plop --plopfile generators/plopfile.js",
+    "lint": "eslint \"./**/*.{js,jsx}\" --fix",
+    "make": "npx plop --plopfile generators/plopfile.js",
+    "sort": "npx sort-package-json && npx sort-npm-scripts",
+    "start": "next",
+    "storybook": "start-storybook -s ./public -p 9001",
+    "test": "jest",
+    "test:ci": "jest --ci",
+    "test:coverage": "jest --coverage",
+    "test:update": "npm test -- -u",
+    "test:watch": "jest --watch"
+  },
+  "lint-staged": {
+    "*.{js}": [
+      "eslint"
+    ],
+    "*.{js,css,json,md,mdx}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "dependencies": {
+    "@emotion/css": "^11.1.3",
+    "@emotion/react": "^11.4.1",
+    "@emotion/server": "^11.4.0",
+    "@emotion/styled": "^11.3.0",
+    "next": "11.0.1",
+    "next-compose-plugins": "^2.2.1",
+    "next-optimized-images": "^2.6.2",
+    "nextjs-google-fonts": "^3.3.2",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "@axe-core/react": "^4.2.2",
+    "@babel/core": "^7.15.0",
+    "@emotion/babel-plugin": "^11.3.0",
+    "@emotion/babel-plugin-jsx-pragmatic": "^0.1.5",
+    "@emotion/jest": "^11.3.0",
+    "@storybook/addon-a11y": "^6.3.6",
+    "@storybook/addon-actions": "^6.3.6",
+    "@storybook/addon-docs": "^6.3.6",
+    "@storybook/addon-essentials": "^6.3.6",
+    "@storybook/addon-links": "^6.3.6",
+    "@storybook/addon-storyshots": "^6.3.6",
+    "@storybook/addon-viewport": "^6.3.6",
+    "@storybook/react": "^6.3.6",
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^12.0.0",
+    "babel-eslint": "^10.1.0",
+    "babel-jest": "^27.1.0",
+    "babel-loader": "^8.2.2",
+    "babel-plugin-macros": "^3.1.0",
+    "babel-plugin-twin": "^1.0.2",
+    "eslint": "^7.32.0",
+    "eslint-config-next": "^11.1.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^3.4.1",
+    "husky": "^4.3.6",
+    "imagemin-mozjpeg": "^9.0.0",
+    "imagemin-optipng": "^8.0.0",
+    "imagemin-svgo": "^9.0.0",
+    "jest": "^27.0.5",
+    "lint-staged": "^11.0.0",
+    "plop": "^2.7.4",
+    "prettier": "^2.3.2",
+    "prop-types": "^15.7.2",
+    "rimraf": "^3.0.2",
+    "tailwindcss": "1.9.6",
+    "twin.macro": "^2.6.2"
+  },
+  "babelMacros": {
+    "twin": {
+      "config": "tailwind.config.js",
+      "preset": "emotion"
+    }
+  }
+}
